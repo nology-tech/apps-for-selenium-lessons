@@ -11,7 +11,7 @@ export default function TaskForm({ categories = [], onSubmit }) {
         if (!categoryId && categories.length > 0) {
             setCategoryId(String(categories[0].id));
         }
-    }, [categories, categoryId]);
+    }, [categories]);
 
     const handleSubmit = async (e) => {
         e.preventDefault();
