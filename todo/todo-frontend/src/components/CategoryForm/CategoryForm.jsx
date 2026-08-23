@@ -30,11 +30,11 @@ export default function CategoryForm({ onSubmit }) {
             <p className={styles.title}>New category</p>
             <div className={styles.inner_container}>
                 <div className={styles.field}>
-                    <label className={styles.label} htmlFor="category-name">
+                    <label className={styles.label} htmlFor="categoryName">
                         Name
                     </label>
                     <input
-                        id="category-name"
+                        id="categoryName"
                         type="text"
                         className={`${styles.input} ${error ? styles.inputError : ""}`}
                         placeholder="e.g. Work, Personal, Errands"
@@ -45,7 +45,11 @@ export default function CategoryForm({ onSubmit }) {
                         }}
                         autoFocus
                     />
-                    {error && <span className={styles.errorText}>{error}</span>}
+                    {error && (
+                        <span className={styles.errorText} id="categoryError">
+                            {error}
+                        </span>
+                    )}
                 </div>
 
                 <button
