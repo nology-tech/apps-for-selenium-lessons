@@ -8,6 +8,7 @@ export default function TaskCard({ task, onToggleComplete }) {
     return (
         <div
             className={`${styles.card} ${completed ? styles.cardCompleted : ""}`}
+            data-testid="task-card"
         >
             <button
                 type="button"
