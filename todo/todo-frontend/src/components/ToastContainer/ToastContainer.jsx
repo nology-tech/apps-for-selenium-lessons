@@ -7,7 +7,7 @@ export default function ToastContainer({ toasts, onDismiss }) {
     return (
         <div className={styles.container}>
             {toasts.map((toast) => (
-                <div key={toast.id} className={styles.toast}>
+                <div key={toast.id} className={styles.toast} id="toast">
                     <span
                         className={`${styles.icon} ${
                             toast.type === "error"

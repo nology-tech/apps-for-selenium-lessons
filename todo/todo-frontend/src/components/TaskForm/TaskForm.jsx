@@ -43,11 +43,11 @@ export default function TaskForm({ categories = [], onSubmit }) {
 
             <div className={styles.row}>
                 <div className={styles.field}>
-                    <label className={styles.label} htmlFor="task-name">
+                    <label className={styles.label} htmlFor="taskName">
                         Name
                     </label>
                     <input
-                        id="task-name"
+                        id="taskName"
                         type="text"
                         className={`${styles.input} ${error ? styles.inputError : ""}`}
                         placeholder="e.g. Finish quarterly report"
@@ -62,11 +62,11 @@ export default function TaskForm({ categories = [], onSubmit }) {
                 </div>
 
                 <div className={`${styles.field} ${styles.fieldCategory}`}>
-                    <label className={styles.label} htmlFor="task-category">
+                    <label className={styles.label} htmlFor="taskCategory">
                         Category
                     </label>
                     <select
-                        id="task-category"
+                        id="taskCategory"
                         className={styles.select}
                         value={categoryId}
                         onChange={(e) => setCategoryId(e.target.value)}
